@@ -4,4 +4,22 @@
 
 <body>
   <h1>Learning Meteor with a TODO LIST</h1>
+  {{> todo_list}}
 </body>
+
+<template name="todo_list">
+  <ul>
+  {{#each todos}}
+    {{> todo_info}}
+  {{else}}
+    Nothing to do, create something!
+  {{/each}}
+  </ul>
+</template>
+
+<template name="todo_info">
+  <li class="{{#if done}}done{{/if}}">
+    <input id="{{_id}}" type="checkbox" {{#if done}}checked="checked"{{/if}}>
+    <label for="{{_id}}">{{desc}}</label>
+  </li>
+</template>
