@@ -1,1 +1,6 @@
 /* CSS declarations go here */
+
+li.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}

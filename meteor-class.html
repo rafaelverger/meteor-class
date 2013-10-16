@@ -19,7 +19,7 @@
 
 <template name="todo_info">
   <li class="{{#if done}}done{{/if}}">
-    <input id="{{_id}}" type="checkbox" {{#if done}}checked="checked"{{/if}}>
+    <input id="{{_id}}" type="checkbox" {{#if done}}checked="checked"{{/if}} />
     <label for="{{_id}}">{{desc}}</label>
   </li>
 </template>
