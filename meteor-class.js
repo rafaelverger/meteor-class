@@ -22,6 +22,9 @@ if (Meteor.isClient) {
   Template.todo_info.events = {
     'change input': function(evt){
       Todos.update(this._id, {$set: {done: !!evt.target.checked}});
+    },
+    'click span': function(evt){
+      Todos.remove(this._id);
     }
   }
 }

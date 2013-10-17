@@ -1,6 +1,11 @@
 /* CSS declarations go here */
 
+li span { display: none; }
+li:hover span { display: inline; cursor: pointer; }
+
 li.done {
-  text-decoration: line-through;
   opacity: 0.5;
+}
+li.done label {
+  text-decoration: line-through;
 }
