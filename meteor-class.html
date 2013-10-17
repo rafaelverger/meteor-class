@@ -8,6 +8,7 @@
 </body>
 
 <template name="todo_list">
+  {{#if todosCount}}<input id="todo_filter" placeholder="Todo Filter"/>{{/if}}
   <ul>
   {{#each todos}}
     {{> todo_info}}
