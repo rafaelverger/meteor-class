@@ -33,4 +33,16 @@ if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
   });
+
+  Todos.allow({
+    insert: function(userId, item) {
+      return true;
+    },
+    update: function(userId, item) {
+      return true;
+    },
+    remove: function(userId, item) {
+      return item.userId == userId;
+    }
+  });
 }
