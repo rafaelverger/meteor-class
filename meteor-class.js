@@ -36,7 +36,7 @@ if (Meteor.isServer) {
 
   Todos.allow({
     insert: function(userId, item) {
-      return true;
+      return item.hasOwnProperty('userId');
     },
     update: function(userId, item) {
       return true;
